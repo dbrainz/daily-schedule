@@ -1,2 +1,2 @@
 # daily-schedule
-UofM Challenge 4 - Build a daily schedule app
+UofM Challenge 5 - Build a daily schedule app
