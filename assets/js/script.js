@@ -3,7 +3,7 @@
 // in the html.
 function updateBlockColors() {
   var currentHour=dayjs().hour();
-  for (blockNum=9; blockNum<18; blockNum++) {
+  for (let blockNum=9; blockNum<18; blockNum++) {
     if (blockNum<currentHour){
       $("#hour-" + blockNum).addClass("past");
       $("#hour-" + blockNum).removeClass("present future");
@@ -13,6 +13,16 @@ function updateBlockColors() {
     } else {
       $("#hour-" + blockNum).addClass("future");
       $("#hour-" + blockNum).removeClass("past present");
+    }
+  }
+}
+
+// Load block text from local storage if anything is stored there
+function loadBlockText(){
+  for (let blockNum=9; blockNum<18; blockNum++) {
+    loadText = localStorage.getItem("ds-hour" + blockNum)
+    if (loadText!== null) {
+      $("#text-" + blockNum).val(loadText)
     }
   }
 }
@@ -39,8 +49,8 @@ $(function () {
   console.log(dayjs().hour());
   console.log(dayjs().format('MM/DD/YYYY'))
   updateBlockColors();
+  loadBlockText();
 
-
-
+  const interval = setInterval(updateBlockColors, 1000);
 });
 
