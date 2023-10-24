@@ -2,12 +2,16 @@
 UofM Challenge 5 - Build a daily schedule app
 
 ## Description
+We were given a daily schedule layout and tasked with the requirement to make it a functional daily planner list
+Blocks are available for each hour of the workday. The user can edit the text, and if they hit a save button it will save their
+entry to local storage
+The background color of the hour blocks changes based on tbhe current time. Red for the current hour, gray for past hours, and green
+for future hours
 
 
+The daily schedule is deployed at https://dbrainz.github.io/daily-schedule/
 
-The javascript quiz is deployed at https://dbrainz.github.io/javascript-quiz/
-
-![Javascript Quiz](image.png)
+![Daily Schedule](image.png)
 
 ## Credits
 
